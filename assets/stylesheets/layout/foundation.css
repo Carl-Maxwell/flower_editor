@@ -1,0 +1,41 @@
+body {
+  background: #f6f8f8; }
+
+.header-background {
+  background: #191919;
+  box-shadow: 0 0 1px #191919;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%; }
+
+.layout-base {
+  margin: 0 auto;
+  width: 1100px; }
+
+.layout-header {
+  background: #191919;
+  height: 30px;
+  padding: 0 0 0 10px;
+  width: 1090px; }
+  .layout-header .logo {
+    display: inline-block;
+    padding: 14px 0; }
+
+hr {
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: white;
+  border-top-color: #9a9a9a; }
+
+.layout-paper {
+  background: #fcfcfc;
+  border: 1px solid #e6e6e6;
+  margin: 10px auto;
+  padding: 20px 25px 25px 25px;
+  width: 800px; }
+  .layout-paper p:nth-child(2) {
+    margin-top: 56px; }
+
+/*# sourceMappingURL=foundation.css.map */

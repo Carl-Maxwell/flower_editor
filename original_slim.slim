@@ -1,0 +1,58 @@
+= form_for([@article]) do |f|
+
+  .twirlyContainer
+    .twirlyLine
+      .twirlyBobble
+
+  h2 = link_to(@article.title, "#", class: 'rename', title: 'Rename article')
+
+  .error_container
+    = render "formerrors"
+
+  = f.text_field :title, hidden: true, class: 'rename_input'
+
+  = f.label :content
+    ul.toolbar
+      li.button flower-command='bold'
+        .image.bold
+      li.button flower-command='italic'
+        .image.italic
+      li.button flower-command='strikethrough'
+        .image.strikethrough
+      li.seperator
+      li.button flower-command='link'
+        .image.link
+      li.seperator
+      li.button flower-command='numbered-list'
+        .image.ordered-list
+      li.button flower-command='list'
+        .image.list
+      li.seperator
+      li.button
+        .image.insertImage
+      li.seperator
+      li.button
+        .image.left flower-command='left-align'
+      li.button
+        .image.center flower-command='center'
+      li.button
+        .image.right flower-command='right-align'
+      li.button
+        .image.justified flower-command='justify'
+      li.seperator
+      li.button
+        .image.superscript flower-command='superscript'
+      li.seperator
+      li.button
+        .image.quote flower-command='quote'
+      li.button
+        .image.code flower-command='code'
+      li.button
+        .image.table flower-command='table'
+    = f.text_area :content, autofocus: true, class: 'flower'
+
+  = f.submit
+
+  hr
+
+  .preview

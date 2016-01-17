@@ -1,0 +1,90 @@
+form label textarea {
+  background: #fcfcfc;
+  border: 0;
+  border-bottom: 1px solid #e6e6e6;
+  font-family: "Droid Sans", "Goudy Bookletter", "League Gothic", serif;
+  font-size: 16px;
+  height: 400px;
+  margin-top: 0;
+  margin-left: -25px;
+  padding: 9px 25px;
+  width: 800px; }
+  form label textarea:focus {
+    outline: 0; }
+form label .toolbar {
+  background: #e6e6e6;
+  border: 0;
+  border-top: 1px solid #e6e6e6;
+  cursor: default;
+  display: block;
+  height: 20px;
+  margin-top: 18px;
+  margin-left: -25px;
+  padding: 4px 13px;
+  width: 825px;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  /* No support for these yet, use at own risk */
+  -o-user-select: none;
+  user-select: none; }
+  form label .toolbar li {
+    display: block;
+    float: left; }
+    form label .toolbar li.seperator {
+      background: #9a9a9a;
+      height: 29px;
+      margin: -5px 8px 0 8px;
+      width: 1px; }
+    form label .toolbar li.button {
+      border: 1px solid transparent;
+      cursor: pointer;
+      font-size: 12px;
+      font-family: "serif";
+      height: 18px;
+      width: 32px; }
+      form label .toolbar li.button .image {
+        -webkit-filter: opacity(0.6);
+        background: transparent center no-repeat;
+        height: 18px;
+        width: 32px; }
+        form label .toolbar li.button .image.bold {
+          background-image: url("./../../images/icons/0355-bold.png"); }
+        form label .toolbar li.button .image.italic {
+          background-image: url("./../../images/icons/0357-italic.png"); }
+        form label .toolbar li.button .image.strikethrough {
+          background-image: url("./../../images/icons/0358-strikethrough.png"); }
+        form label .toolbar li.button .image.list {
+          background-image: url("./../../images/icons/0188-list2.png"); }
+        form label .toolbar li.button .image.ordered-list {
+          background-image: url("./../../images/icons/0186-list-numbered.png"); }
+        form label .toolbar li.button .image.insertImage {
+          background-image: url("./../../images/icons/0014-image.png"); }
+        form label .toolbar li.button .image.left {
+          background-image: url("./../../images/icons/0376-paragraph-left.png"); }
+        form label .toolbar li.button .image.center {
+          background-image: url("./../../images/icons/0377-paragraph-center.png"); }
+        form label .toolbar li.button .image.right {
+          background-image: url("./../../images/icons/0378-paragraph-right.png"); }
+        form label .toolbar li.button .image.justified {
+          background-image: url("./../../images/icons/0379-paragraph-justify.png"); }
+        form label .toolbar li.button .image.link {
+          background-image: url("./../../images/icons/0204-link.png"); }
+        form label .toolbar li.button .image.superscript {
+          background-image: url("./../../images/icons/0364-superscript2.png"); }
+        form label .toolbar li.button .image.quote {
+          background-image: url("./../../images/icons/0120-quotes-left.png"); }
+        form label .toolbar li.button .image.code {
+          background-image: url("./../../images/icons/0385-embed2.png"); }
+        form label .toolbar li.button .image.table {
+          background-image: url("./../../images/icons/0370-table2.png"); }
+      form label .toolbar li.button:active {
+        box-shadow: 0 0 3px -1px black inset; }
+      form label .toolbar li.button:hover {
+        background-color: #e6e6e6;
+        border: 1px solid #d9d9d9; }
+
+/*# sourceMappingURL=editor.css.map */

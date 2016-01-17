@@ -1,0 +1,9 @@
+form a.rename {
+  color: #1e1e1e;
+  display: inline-block;
+  padding: 0 10px;
+  margin-left: -10px; }
+  form a.rename:hover {
+    background: #e6e6e6; }
+
+/*# sourceMappingURL=rename.css.map */

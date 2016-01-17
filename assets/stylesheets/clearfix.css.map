@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,SAAU;EACR,QAAQ,EAAE,IAAI;EACd,IAAI,EAAE,CAAC",
+"sources": ["clearfix.scss"],
+"names": [],
+"file": "clearfix.css"
+}

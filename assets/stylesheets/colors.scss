@@ -1,0 +1,21 @@
+$white: #fcfcfc;
+$black: #f6f8f8;
+$grey: #e6e6e6;
+
+$darkgrey: grey;
+$trueblack: #191919;
+
+$fab: #fab;
+
+//85858f
+
+$bluegrey: hsl(240, 7, 56);
+$blue: hsl(246, 32, 56);
+$lightblue: hsl(246, 62, 56);
+$darkblue: hsl(246, 32, 36);
+
+$borderblack: #9a9a9a;
+
+$fontcolor: lighten($trueblack, 2);
+
+$sidebar_font_color: rgba(darken(desaturate($bluegrey, 100%), 6), 0.81);

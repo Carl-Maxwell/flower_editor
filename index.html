@@ -1,0 +1,113 @@
+<head>
+  <title>Flower Editor</title>
+
+  <link rel="stylesheet" media="all" href="./assets/stylesheets/browserpatching/browserpatching.css">
+  <link rel="stylesheet" media="all" href="./assets/stylesheets/clearfix.css">
+  <link rel="stylesheet" media="all" href="./assets/stylesheets/formstuff/editor.css">
+  <link rel="stylesheet" media="all" href="./assets/stylesheets/formstuff/inputs.css">
+  <link rel="stylesheet" media="all" href="./assets/stylesheets/formstuff/rename.css">
+  <link rel="stylesheet" media="all" href="./assets/stylesheets/layout/foundation.css">
+  <link rel="stylesheet" media="all" href="./assets/stylesheets/reset.css">
+  <link rel="stylesheet" media="all" href="./assets/stylesheets/typography/general.css">
+
+  <script src="./vendors/jquery-1.12.0.js"></script>
+  <script src="./vendors/commonmark.js"></script>
+
+  <script src="./assets/javascripts/actuateLink.js"></script>
+  <script src="./assets/javascripts/application.js"></script>
+  <script src="./assets/javascripts/editor/flower.js"></script>
+  <script src="./assets/javascripts/editor/old_editor.js"></script>
+  <script src="./assets/javascripts/editor/syntax.js"></script>
+  <script src="./assets/javascripts/editor/syntax_commonmark.js"></script>
+  <script src="./assets/javascripts/editor/tests/test.js"></script>
+  <script src="./assets/javascripts/editor/text.js"></script>
+  <script src="./assets/javascripts/editor/text_selection.js"></script>
+  <script src="./assets/javascripts/fromwhichtostring.js"></script>
+  <script src="./assets/javascripts/keycommands.js"></script>
+  <script src="./assets/javascripts/monkeypatches/array_polyfills.js"></script>
+  <script src="./assets/javascripts/monkeypatches/monkeypatch.js"></script>
+  <script src="./assets/javascripts/monkeypatches/string_polyfills.js"></script>
+
+  <!-- <link href="http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica:400,400italic|Ruslan+Display|Libre+Baskerville|EB+Garamond|Merriweather|Alegreya|Quattrocento+Sans|Titillium+Web|Pontano+Sans" rel="stylesheet" type="text/css"><style type="text/css">.tk-rosario{font-family:"rosario",sans-serif;}</style><link rel="stylesheet" href="https://use.typekit.net/c/52fcb5/1w;rosario,7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191,ZQx:R:i4,f8L:R:i7,ZQw:R:n4,ZQy:R:n7/l?3bb2a6e53c9684ffdc9a9af3135b2a62c9580c6c0a51a7a4dd7b8a278a2bbbafab3833d56270f9b83c60ccd331a8fd4b7d3712346dcf48cc80b341" media="all"><style type="text/css">.tk-rosario{font-family:"rosario",sans-serif;}</style><link rel="stylesheet" href="https://use.typekit.net/c/52fcb5/1w;rosario,7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191,ZQx:R:i4,f8L:R:i7,ZQw:R:n4,ZQy:R:n7/l?3bb2a6e53c9684ffdc9a9af3135b2a62c9580c6c0a51a7a4dd7b8a278a2bbbafab3833d56270f9b83c60ccd331a8fd4b7d3712346dcf48cc80b341" media="all"><style type="text/css">.tk-rosario{font-family:"rosario",sans-serif;}</style><link rel="stylesheet" href="https://use.typekit.net/c/52fcb5/1w;rosario,7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191,ZQx:R:i4,f8L:R:i7,ZQw:R:n4,ZQy:R:n7/l?3bb2a6e53c9684ffdc9a9af3135b2a62c9580c6c0a51a7a4dd7b8a278a2bbbafab3833d56270f9b83c60ccd331a8fd4b7d3712346dcf48cc80b341" media="all"><style type="text/css">.tk-rosario{font-family:"rosario",sans-serif;}</style><link rel="stylesheet" href="https://use.typekit.net/c/52fcb5/1w;rosario,7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191,ZQx:R:i4,f8L:R:i7,ZQw:R:n4,ZQy:R:n7/l?3bb2a6e53c9684ffdc9a9af3135b2a62c9580c6c0a51a7a4dd7b8a278a2bbbafab3833d56270f9b83c60ccd331a8fd4b7d3712346dcf48cc80b341" media="all"> -->
+</head>
+<body>
+<div class="header-background"></div>
+
+<div class="layout-base">
+
+  <div class="layout-header">
+    <a class="logo" href="/">Flower Editor</a>
+  </div>
+
+  <div class="clearfix" style="margin-top:20px;">
+    <div class="layout-paper">
+      <form class="edit_article" action="#" accept-charset="UTF-8" method="post">
+        <label for="article_content">
+          <ul class="toolbar">
+            <li class="button" flower-command="bold" title="Bold (Ctrl+B)">
+              <div class="image bold"></div>
+            </li>
+            <li class="button" flower-command="italic" title="Italic (Ctrl+I)">
+              <div class="image italic"></div>
+            </li>
+            <li class="button" flower-command="strikethrough" title="Strikethrough (Ctrl+S, Alt+Shift+5)">
+              <div class="image strikethrough"></div>
+            </li>
+            <li class="seperator"></li>
+            <li class="button" flower-command="link" title="Link (Ctrl+K)">
+              <div class="image link"></div>
+            </li>
+            <li class="seperator"></li>
+            <li class="button" flower-command="numbered-list" title="Numbered List (Ctrl+Shift+7)">
+              <div class="image ordered-list"></div>
+            </li>
+            <li class="button" flower-command="list" title="List (Ctrl+Shift+8)">
+              <div class="image list"></div>
+            </li>
+            <li class="seperator"></li>
+            <li class="button">
+              <div class="image insertImage"></div>
+            </li>
+            <li class="seperator"></li>
+            <li class="button">
+              <div class="image left" flower-command="left-align" title="Left Align (Ctrl+Shift+L)"></div>
+            </li>
+            <li class="button">
+              <div class="image center" flower-command="center" title="Center (Ctrl+Shift+E)"></div>
+            </li>
+            <li class="button">
+              <div class="image right" flower-command="right-align" title="Right Align (Ctrl+Shift+R)"></div>
+            </li>
+            <li class="button">
+              <div class="image justified" flower-command="justify" title="Justify (Ctrl+Shift+J)"></div>
+            </li>
+            <li class="seperator"></li>
+            <li class="button">
+              <div class="image superscript" flower-command="superscript" title="Superscript"></div>
+            </li>
+            <li class="seperator"></li>
+            <li class="button">
+              <div class="image quote" flower-command="quote" title="Quote (Ctrl+Shift+.)"></div>
+            </li>
+            <li class="button">
+              <div class="image code" flower-command="code" title="Code"></div>
+            </li>
+            <li class="button">
+              <div class="image table" flower-command="table" title="Table"></div>
+            </li>
+          </ul>
+          <textarea autofocus="autofocus" class="flower" name="article[content]" id="article_content"></textarea>
+        </label>
+        <hr>
+        <div class="preview"></div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<script src="//use.typekit.net/kkw2icw.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+
+
+</body>

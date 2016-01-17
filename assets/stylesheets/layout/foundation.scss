@@ -1,0 +1,55 @@
+@import "layout/sizes";
+@import "colors";
+@import "mixins";
+
+body{
+  background: $black
+}
+
+.header-background{
+  background: $trueblack;
+  box-shadow: 0 0 1px $trueblack;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+.layout-base{
+  margin: 0 auto;
+  width: $layout_width;
+}
+
+.layout-header{
+  background: $trueblack;
+  height: 30px;
+  padding: 0 0 0 10px;
+  width: $layout_width - 10px;
+
+  .logo{
+    display: inline-block;
+    // padding-top: 4px;
+    padding: 14px 0;
+  }
+}
+
+hr{
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: lighten($borderblack, 43);
+  border-top-color: $borderblack;
+}
+
+.layout-paper{
+  background: #fcfcfc;
+  border: 1px solid $grey;
+  // float: right;
+  margin: 10px auto;
+  padding: 20px 25px 25px 25px;
+  width: $paper_width;
+
+  p:nth-child(2){
+    margin-top: 8px + 3*$grid;
+  }
+}

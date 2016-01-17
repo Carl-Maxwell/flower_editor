@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,WAAW;EACT,UAAU,EAAE,IAAI;;AAGlB,gBAAgB;EACd,UAAU,EAAE,IAAI",
+"sources": ["browserpatching.scss"],
+"names": [],
+"file": "browserpatching.css"
+}

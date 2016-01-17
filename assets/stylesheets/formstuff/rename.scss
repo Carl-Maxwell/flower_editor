@@ -1,0 +1,12 @@
+@import 'colors';
+
+form a.rename{
+  color: $fontcolor;
+  display: inline-block;
+  padding: 0 10px;
+  margin-left: -10px;
+
+  &:hover{
+    background: $grey;
+  }
+}

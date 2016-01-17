@@ -1,0 +1,97 @@
+@import 'colors';
+@import 'layout/sizes';
+@import 'mixins';
+@import 'typography/fonts';
+
+form {
+  label{
+    textarea{
+      background: hsl(0, 0%, 99%);
+      border: 0;
+      border-bottom: 1px solid $grey;
+      font-family: $bodyfont;
+      font-size: 16px;
+      height: 400px;
+      margin-top: 0;
+      margin-left: -25px;
+      padding: 9px 25px;
+      width: $paper_width - 50px + 50px;
+
+      &:focus{
+        outline: 0;
+      }
+    }
+    .toolbar{
+      background: $grey;
+      // background: linear-gradient($grey, lighten($grey, 3) 30%, $grey);
+      border: 0;
+      border-top: 1px solid $grey;
+      cursor: default;
+      display: block;
+      height: 20px;
+      margin-top: 18px;
+      margin-left: -25px;
+      padding: 4px 13px;
+      width: $paper_width + 25px;
+
+      @include user-select();
+
+      li{
+        display: block;
+        float: left;
+
+        &.seperator{
+          background: $borderblack;
+          height: 29px;
+          margin: -5px 8px 0 8px;
+          width: 1px;
+        }
+        &.button{
+          border: 1px solid transparent;
+          cursor: pointer;
+          font-size: 12px;
+          font-family: "serif";
+          height: 16px + 2px;
+          width: 16px + 16px;
+
+          .image{
+            -webkit-filter: opacity(0.6);
+            background: transparent center no-repeat;
+            height: 16px + 2px;
+            width: 16px + 16px;
+
+            &.bold{          background-image: image-url('icons/0355-bold.png'             ); }
+            &.italic{        background-image: image-url('icons/0357-italic.png'           ); }
+            &.strikethrough{ background-image: image-url('icons/0358-strikethrough.png'    ); }
+
+            &.list{          background-image: image-url('icons/0188-list2.png'            ); }
+            &.ordered-list{  background-image: image-url('icons/0186-list-numbered.png'    ); }
+
+            &.insertImage{   background-image: image-url('icons/0014-image.png'            ); }
+
+            &.left{          background-image: image-url('icons/0376-paragraph-left.png'   ); }
+            &.center{        background-image: image-url('icons/0377-paragraph-center.png' ); }
+            &.right{         background-image: image-url('icons/0378-paragraph-right.png'  ); }
+            &.justified{     background-image: image-url('icons/0379-paragraph-justify.png'); }
+
+            &.link{          background-image: image-url('icons/0204-link.png'             ); }
+
+            &.superscript{   background-image: image-url('icons/0364-superscript2.png'     ); }
+
+            &.quote{         background-image: image-url('icons/0120-quotes-left.png'      ); }
+            &.code{          background-image: image-url('icons/0385-embed2.png'           ); }
+            &.table{         background-image: image-url('icons/0370-table2.png'           ); }
+          }
+
+          &:active{
+            box-shadow: 0 0 3px -1px black inset;
+          }
+          &:hover{
+            background-color: $grey;
+            border: 1px solid darken($grey, 5);
+          }
+        }
+      }
+    }
+  }
+}

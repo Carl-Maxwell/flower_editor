@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,aAAa;EACX,KAAK,ECeK,OAAsB;EDdhC,OAAO,EAAE,YAAY;EACrB,OAAO,EAAE,MAAM;EACf,WAAW,EAAE,KAAK;EAElB,mBAAO;IACL,UAAU,ECPP,OAAO",
+"sources": ["rename.scss","../colors.scss"],
+"names": [],
+"file": "rename.css"
+}

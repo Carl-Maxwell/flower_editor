@@ -1,0 +1,23 @@
+input[type="text"], input[type="password"] {
+  border: 1px solid darkgray;
+  box-shadow: 0 0 6px -2px #bebebe inset;
+  padding: 10px;
+  width: 778px; }
+
+input[type="submit"] {
+  background: #Fab;
+  border: 1px solid #ed9eae;
+  color: black;
+  padding: 5px 10px;
+  /*TODO add hover & click pseudo-classes*/ }
+  input[type="submit"]:hover {
+    box-shadow: 0 0px 1px #968c8c;
+    background: linear-gradient(#ffadbe, #F5A5B6); }
+
+input[type="submit"] {
+  font-size: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 800px; }
+
+/*# sourceMappingURL=inputs.css.map */

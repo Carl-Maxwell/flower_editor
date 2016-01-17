@@ -1,0 +1,135 @@
+@import "colors";
+@import "layout/sizes";
+@import "typography/fonts";
+
+input, textarea, p, h1, h2, h3, table{
+	margin: 5px 0;
+}
+
+p{
+  margin: 22px 0;
+}
+
+html{
+  color: $fontcolor;
+  font-size: 22px;
+  font-family: serif;
+  //font-family: freight-text-pro, Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+
+.logo{
+  color: #fab !important;
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none;
+
+  &:link{
+    color: $blue;
+  }
+
+  &:visited{
+    color: $darkblue;
+  }
+
+  &:hover{
+    color: $lightblue;
+  }
+
+  &:active{
+    color: #663e79;
+  }
+
+  &:focus{}
+}
+
+// styling rich text editing stuff:
+
+@font-face {
+  font-family: 'League Gothic';
+  //src: image-url('fonts/LeagueGothic-Regular.otf'); //url('webfont.eot');
+  src: font-url('leaguegothic-regular-webfont.ttf') format('truetype'),
+    font-url('leaguegothic-regular-webfont.wof') format('woff');
+}
+
+@font-face{
+  font-family: 'Goudy Bookletter';
+  src: font-url('goudy_bookletter_1911-webfont.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Deja Vu Sans Mono';
+  src: font-url('DejaVuSansMono.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Droid Sans';
+  src: font-url('DroidSans-webfont.ttf') format("truetype"),
+    font-url('DroidSans-webfont.wof') format('woff');
+}
+
+.article, .layout-paper{
+  font-family: $bodyfont;//, sans-serif;
+  font-size: 16px;
+
+  li, p{
+    line-height: 22px;
+  }
+  em{
+    font-style: italic;
+  }
+  strong{
+    font-weight: bold;
+  }
+  ul{
+    list-style: initial;
+  }
+  ol{
+    list-style-type: decimal;
+  }
+  ul, ol{
+    padding-left: 30px;
+
+    li{
+      color: rgba(30, 30, 30, 0.86);
+    }
+  }
+  blockquote{
+    background: #f9f9f9;
+    padding: 0.5em 10px;
+    margin-left: 50px;
+    position: relative;
+    quotes: "\201C""\201D""\2018""\2019";
+
+    &:before {
+      color: #ccc;
+      content: open-quote;
+      font-size: 4em;
+      left: -50px;
+      line-height: 0.1em;
+      position: absolute;
+      top: 40px;
+      vertical-align: -0.4em;
+    }
+  }
+
+}
+
+table{
+  border-collapse: collapse;
+  margin: $paper_padding 0 $paper_padding 0-$paper_padding;
+  width: $paper_width + $paper_padding*2;
+
+  td{
+    background: darken( $black, 0);
+    border-bottom: 1px dashed rgb(235, 235, 235);
+    padding: $paper_padding;
+  }
+  tr:nth-child(2n) td{
+    background: darken( $black, 2);
+  }
+  tr:nth-last-child(1) td{
+    border-bottom-width: 0;
+  }
+}

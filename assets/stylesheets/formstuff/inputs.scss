@@ -1,0 +1,38 @@
+@import "layout/sizes";
+@import "colors";
+
+input[type="text"], input[type="password"] {
+  border: 1px solid rgb(169, 169, 169);
+  box-shadow: 0 0 6px -2px rgb(190, 190, 190) inset;
+  padding: 10px;
+  width: $paper_width - 20px - 2px;
+}
+
+input[type="submit"] {
+  background: #Fab;
+  border: 1px solid #ed9eae;
+  color: black;
+  padding: 5px 10px;
+
+  &:hover{
+    // border-style: solid;
+
+    // TODO for some reason desaturate( #fab, 1) isn't working
+
+    // box-shadow: 0 0px 1px #ffadbe;
+    // border-color: #ffadbe;
+    // background-color: #ffadbe;
+
+    box-shadow: 0 0px 1px rgb(150, 140, 140);
+    background: linear-gradient(#ffadbe, #F5A5B6);
+  }
+
+  /*TODO add hover & click pseudo-classes*/
+}
+
+input[type="submit"]{
+  font-size: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: $paper_width;
+}
